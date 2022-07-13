@@ -28,7 +28,7 @@ pipeline{
                 bdd("BDD")
             }
         }
-        stage('Parallel Stages"){
+        stage('Parallel Stages'){
               parallel{
                 stage('Nexus Publish'){
                     steps{
