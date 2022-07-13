@@ -30,14 +30,15 @@ pipeline{
         }
         stage('Parallel Stages'){
               parallel{
-                echo "Running as Parrallel Stages"
                 stage('Nexus Publish'){
                     steps{
+                        echo "Running as a Parrallel Stage"
                         nexuspublish("Nexus Publish")
                     }
                 }
                 stage('BDD'){
                     steps{
+                        echo "Running as a Parrallel Stage"
                         bdd("BDD")
                     }
                 }
