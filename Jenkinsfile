@@ -10,7 +10,7 @@ pipeline{
         }
         stage('Nexus Publish'){
             steps{
-                nexus-publish("Nexus Publish")
+                nexuspublish("Nexus Publish")
             }
         }
         stage('Build'){
@@ -20,7 +20,7 @@ pipeline{
         }
         stage('Image Push'){
             steps{
-                image-push("Image Push")
+                imagepush("Image Push")
             }
         }
         stage('BDD'){
